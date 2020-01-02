@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Regresar"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Cart</ion-title>
+
+    <ion-buttons slot="end">
+      <!-- <ion-button fill="clear" id="notification-button">
+        <ion-icon name="cart" slot="icon-only">
+          <ion-badge id="notification-badge" color="danger">5</ion-badge>
+        </ion-icon>
+      </ion-button> -->
+
+      <!-- <ion-button class="notification-icon-button">
+        <ion-badge class="notification-badge"> {{ numero || 0 }} </ion-badge>
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button> -->
+
+      <ion-button class="notification-icon-button">
+        <span class="notification-badge" [hidden]="numero == 0"> {{ numero || 0 }} </span>
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h1>Notificación para carrito de compras</h1>
+  <ion-button expand="full" color="primary" (click)="add()">
+    Agregar producto
+  </ion-button>
+  <ion-button expand="full" color="primary" (click)="restar()">
+    Restar producto
+  </ion-button>
+  <ion-button expand="full" color="primary" (click)="borrar()">
+    Borrar productos
+  </ion-button>
+</ion-content>

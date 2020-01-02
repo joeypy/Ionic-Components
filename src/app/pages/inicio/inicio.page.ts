@@ -77,6 +77,11 @@ export class InicioPage implements OnInit {
       icon: 'refresh-circle',
       name: 'Loading',
       redirectTo: '/loading'
+    },
+    {
+      icon: 'cart',
+      name: 'Shopping Cart',
+      redirectTo: '/shooping-cart'
     }
   ];
 
