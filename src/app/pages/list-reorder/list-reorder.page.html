@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>List - Reorder</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-reorder-group (ionItemReorder)="doReorder($event)" [disabled]="false">
+
+      <ion-item *ngFor="let personaje of personajes; let i = index">
+        <ion-label> {{ i + 1 }}. {{ personaje }} </ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+
+    </ion-reorder-group>
+  
+    <div class="ion-padding ion-text-center">
+      <ion-button expand="full" (click)="onClick()">MOSTRAR ORDEN</ion-button>
+    </div>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Reorder list with fixed values</ion-label>
+    </ion-list-header>
+    
+    <ion-reorder-group (ionItemReorder)="doReorderItems($event)" [disabled]="false">
+
+      <ion-item *ngFor="let personaje of personajes2; let i = index">
+        <ion-label> {{ i + 1 }}. {{ personaje }} </ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+
+    </ion-reorder-group>
+    
+  </ion-list>
+
+</ion-content>
