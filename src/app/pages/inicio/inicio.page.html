@@ -7,7 +7,7 @@
       <ion-icon name="menu" slot="icon-only"></ion-icon>
       </ion-button> -->
 
-      <ion-menu-button color="primary" menu="first">
+        <ion-menu-button color="primary" menu="first">
       </ion-menu-button>
 
     </ion-buttons>
@@ -20,7 +20,7 @@
 <ion-content>
 
   <ion-list>
-    <ion-item *ngFor="let c of componentes" [routerLink]="c.redirectTo" detail>
+    <ion-item *ngFor="let c of componentes | async" [routerLink]="c.redirectTo" detail>
       <ion-icon slot="start" [name]="c.icon"></ion-icon>
       <ion-label>{{ c.name }}</ion-label>
     </ion-item>
