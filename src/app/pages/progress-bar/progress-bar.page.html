@@ -1,0 +1,32 @@
+<app-header titulo="Progress Bar - Range"></app-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-progress-bar type="determinate" 
+                      [value]="porcentaje" 
+                      color="primary">
+    </ion-progress-bar> 
+    <ion-label slot="start">Descargando: {{ porcentaje * 100 }}</ion-label>       
+  </ion-item>
+
+  <ion-item> 
+    <ion-label>Range</ion-label>
+      <ion-range (ionChange)="rangeChange($event)"
+                 min="0" max="100"
+                 pin="true" color="primary"
+                 snaps="false" step="1"
+                 value="0">
+      <ion-label slot="start">0</ion-label>
+      <ion-label slot="end">100</ion-label>
+    </ion-range>
+  </ion-item>
+
+  <ion-item>
+    <ion-range min="1000" max="2000" step="100" value="1400" snaps color="danger">
+      <ion-icon slot="start" size="small" color="danger" name="thermometer"></ion-icon>
+      <ion-icon slot="end" color="danger" name="thermometer"></ion-icon>
+    </ion-range>
+  </ion-item>
+  
+</ion-content>

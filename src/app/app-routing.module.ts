@@ -65,6 +65,18 @@ const routes: Routes = [
     path: 'shooping-cart',
     loadChildren: () => import('./pages/shooping-cart/shooping-cart.module').then( m => m.ShoopingCartPageModule)
   },
+  {
+    path: 'modal',
+    loadChildren: () => import('./pages/modal/modal.module').then( m => m.ModalPageModule)
+  },
+  {
+    path: 'popover',
+    loadChildren: () => import('./pages/popover/popover.module').then( m => m.PopoverPageModule)
+  },
+  {
+    path: 'progress-bar',
+    loadChildren: () => import('./pages/progress-bar/progress-bar.module').then( m => m.ProgressBarPageModule)
+  }
 ];
 
 @NgModule({
